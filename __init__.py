@@ -39,6 +39,8 @@ def handleQuery(albertQuery: Query) -> list[Item]:
     info("Kiten Query: " + query);
     results = kiten.lookup(query, 15);
 
+    albertQuery.disableSort();
+
     albertItems = [];
 
     for res in results:
