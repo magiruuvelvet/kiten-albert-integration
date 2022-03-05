@@ -20,6 +20,9 @@ __authors__ = "マギルゥーベルベット";
 
 iconPath = iconLookup("kiten");
 
+def parse(query: str) -> str:
+    return query.strip();
+
 def initialize():
     pass;
 
@@ -32,7 +35,7 @@ def handleQuery(albertQuery: Query) -> list[Item]:
         return [];
 
     # get the actual query for kiten, abort when empty
-    query = albertQuery.string
+    query = parse(albertQuery.string);
     if len(query) == 0:
         return [];
 
@@ -44,7 +47,7 @@ def handleQuery(albertQuery: Query) -> list[Item]:
     albertItems = [];
 
     for res in results:
-        item = Item(
+        albertItems.append(Item(
             id=__title__,
             icon=iconPath,
             text=res,
@@ -52,9 +55,8 @@ def handleQuery(albertQuery: Query) -> list[Item]:
             completion=__triggers__,
             urgency=ItemBase.Normal,
             actions=[
-                ClipAction(text="ClipAction", clipboardText=res)
+                ClipAction(text="ClipAction", clipboardText=res),
             ]
-        );
-        albertItems.append(item);
+        ));
 
     return albertItems;
