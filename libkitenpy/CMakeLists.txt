@@ -2,8 +2,8 @@ set(CURRENT_TARGET "libkitenpy")
 set(CURRENT_TARGET_NAME "libkitenpy")
 
 find_package(Qt5Core REQUIRED)
-find_package(PythonInterp 3.9 REQUIRED)
-find_package(PythonLibs 3.9 REQUIRED)
+find_package(PythonInterp 3.11 REQUIRED)
+find_package(PythonLibs 3.11 REQUIRED)
 
 message(STATUS "Python include directory: ${PYTHON_INCLUDE_DIR}")
 message(STATUS "Python library: ${PYTHON_LIBRARY}")
