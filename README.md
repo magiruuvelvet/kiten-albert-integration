@@ -7,7 +7,7 @@ Query the Kiten Japanese dictionary directly from [Albert Launcher](https://gith
 **Dependencies**
 
  - Albert Launcher with Python Extension Support
- - Qt5Core
+ - Qt6Core
  - Kiten
  - Python
 
