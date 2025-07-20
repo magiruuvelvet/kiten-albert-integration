@@ -1,7 +1,7 @@
 set(CURRENT_TARGET "libkitenpy")
 set(CURRENT_TARGET_NAME "libkitenpy")
 
-find_package(Qt5Core REQUIRED)
+find_package(Qt6Core REQUIRED)
 find_package(PythonInterp 3.11 REQUIRED)
 find_package(PythonLibs 3.11 REQUIRED)
 
@@ -24,7 +24,7 @@ PRIVATE
 
 target_link_libraries(${CURRENT_TARGET}
 PRIVATE
-    Qt5::Core
+    Qt6::Core
     ${PYTHON_LIBRARY}
     -lkiten
 )
